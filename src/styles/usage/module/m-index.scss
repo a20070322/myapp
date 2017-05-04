@@ -1,0 +1,17 @@
+.m-index {
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  header {
+    height: 44px;
+    background: red;
+  }
+  section {
+    @include flex(1);
+    background: gray;
+  }
+  nav {
+    height: 44px;
+    background: yellow;
+  }
+}
