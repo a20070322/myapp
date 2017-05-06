@@ -1,5 +1,7 @@
 @charset "UTF-8";
-// 样式重置
-@import "./usage/core/reset.scss";
-// 首页样式
-@import "./usage/module/m-index.scss";
+
+@import "./usage/core/reset";
+
+@import "./usage/module/m-common";
+
+@import "./usage/module/m-index";

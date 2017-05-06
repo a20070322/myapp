@@ -10,5 +10,11 @@
       "presets": ["env", "stage-2"],
       "plugins": [ "istanbul" ]
     }
-  }
+  },
+  "plugins": [["component", [
+    {
+      "libraryName": "mint-ui",
+      "style": true
+    }
+  ]]]
 }
