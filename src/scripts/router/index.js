@@ -16,21 +16,21 @@ export default new Router({
       path: '/',
       component: Index,
       //设置初始路由
-      redirect: 'home',
+      redirect: '/home',
       children: [
         {
           //首页
-          path: 'home',
+          path: '/home',
           component: Home
         },
         {
           //分类
-          path: 'classify',
+          path: '/classify',
           component: Classify
         },
         {
           //购物车
-          path: "/Cart",
+          path: "/cart",
           component:Cart
         },
         {
