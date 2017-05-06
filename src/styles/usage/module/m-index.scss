@@ -1,19 +1,3 @@
-@import "../fragment/yo-header";
-
-@include yo-header(
-  $name: a,
-  $bgcolor: #35495e,
-  $item-ico-color: #fff,
-  $border-width: 0,
-  $color: #fff,
-  $font-size: .12rem
-){
-  .regret {
-    left: auto;
-    right: 0;
-  }
-}
-
 .m-index {
   height: 100%;
   @include flexbox();
@@ -22,7 +6,7 @@
   section {
     @include flex(1);
     width: 100%;
-    // background: gray;
+    background: #fff;
     .mint-swipe {
       height: 1.9rem;
       img {
@@ -32,8 +16,9 @@
   }
 
   nav {
-    height: .5rem;
-    background: #f5f5f5;
+    border-top:0.25px #f5f5f5 solid;
+    height: .51rem;
+    background: #ffffff;
     ul {
       width: 100%;
       height: 100%;
@@ -44,16 +29,16 @@
         @include flex-direction(column);
         @include justify-content(center);
         @include align-items(center);
-        padding-top: .06rem;
+        padding-top: .12rem;
         line-height: .2rem;
-        font-size: .24rem;
-        color: #999;
+        font-size: .22rem;
+        color: #cccccc;
         b {
           font-size: .12rem;
           font-weight: normal;
         }
         &.active {
-          color: #35495e;
+          color: #008fdf;
         }
       }
     }
