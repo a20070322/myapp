@@ -6,9 +6,10 @@
     @include flex(1);
     width: 100%;
     background: #fff;
+    overflow-x:hidden;
     overflow-y:scroll;
+    word-wrap:break-word;
   }
-
   nav {
     border-top:0.25px #f5f5f5 solid;
     height: .51rem;
