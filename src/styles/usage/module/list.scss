@@ -1,0 +1,47 @@
+.list{
+	header{
+		width:100%;
+		height:.40rem;
+		/*background: pink;*/
+		@include flexbox();
+		.l_head{
+			@include flex();
+			input{
+				width:2.8rem;
+				height:.27rem;
+				outline: none;
+				border-radius:7px;
+				background: #f2f2f2;
+			}
+		}
+	}
+}
+.l_ul li{
+	width:1.83rem;
+	height:2.53rem;
+	background: pink;
+	border:0.005rem solid #ccc;
+	padding:.16rem;
+	img{
+		width:1.5rem;
+		height:1.34rem;
+		background:grey;
+		margin:0;
+	}
+	.l_ds{
+		margin-top: 10px;
+		b{
+			line-height: 25px;
+			font-size: .15rem;
+		}
+		p{
+			line-height: 20px;
+			color:#6f6f6f;
+			font-size: .13rem;
+		}
+		i{
+			line-height: 30px;
+			font-weight: 600;
+		}
+	}
+}

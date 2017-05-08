@@ -8,7 +8,7 @@ import Home from '@/scripts/components/home'
 import Classify from '@/scripts/components/classify'
 import Cart from '@/scripts/components/cart'
 import Me from '@/scripts/components/me'
-
+import List from '@/scripts/components/list'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -40,9 +40,10 @@ export default new Router({
         }
       ]
     },
-    // {
-    //   // 详情路由
-    //   path:'/details/:id'
-    // }
+    {
+      // 详情路由
+      path:'/list/:id',
+      component:List
+    }
   ]
 })
