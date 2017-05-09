@@ -1,15 +1,20 @@
 <template lang="html">
   <div class="list">
     <header>
-		<p class="l_p  yo-ico">11</p>
+     <router-link to="/classify" active-class="active">
+        <p class="l_pp  yo-ico">&nbsp;&#xf07d;</p>
+     </router-link> 
 		<div class="l_head">
-			<span class="yo-ico">&#xe611;</span>
+			<span class="l_span yo-ico">&#xe611;</span>
 			<input type="text">
 		</div>
-    <p class="iconfont icon-gouwuche1">22</p>
+     <router-link to="/cart" active-class="active">
+    <p class="l_p yo-ico">&#xe768;&nbsp;&nbsp;</p>
+     </router-link> 
     </header>
     <section>
 		<ul class="l_ul">
+     <router-link to="/detail" active-class="active">
 			<li v-for="">
 				<img src="" alt="">
 				<div class="l_ds">
@@ -17,9 +22,8 @@
 					<p>产地直踩 鲜活饱满</p>
           <i>￥218</i>
 				</div>
-				
-				
 			</li>
+      </router-link> 
 		</ul>
     </section>
   </div>

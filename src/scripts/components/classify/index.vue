@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="classify">
     <header>
-		<div class="iconfont icon-iconmaixian"></div>
+		<div class="c_head yo-ico">&#xe61f;</div>
     </header>
     <section>
  	<ul class="c_ul">

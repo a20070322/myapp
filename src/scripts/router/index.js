@@ -9,6 +9,8 @@ import Classify from '@/scripts/components/classify'
 import Cart from '@/scripts/components/cart'
 import Me from '@/scripts/components/me'
 import List from '@/scripts/components/list'
+import Detail from '@/scripts/components/detail'
+
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -41,9 +43,14 @@ export default new Router({
       ]
     },
     {
-      // 详情路由
+      // 列表路由
       path:'/list/:id',
       component:List
+    },
+    {
+      //详情路由
+      path:'/detail',
+      component:Detail
     }
   ]
 })

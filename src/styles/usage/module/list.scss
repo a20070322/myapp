@@ -1,11 +1,24 @@
 .list{
+	background: #fff;
+	height:100%;
 	header{
+
 		width:100%;
 		height:.40rem;
-		/*background: pink;*/
 		@include flexbox();
+		.l_pp{
+			font-weight: 600;
+			color:#ccc;
+			line-height: .45rem;
+		}
 		.l_head{
 			@include flex();
+
+			l_span{
+				width:.27rem;
+				height:.27rem;
+				background: #f2f2f2;
+			}
 			input{
 				width:2.8rem;
 				height:.27rem;
@@ -14,12 +27,16 @@
 				background: #f2f2f2;
 			}
 		}
+		.l_p{
+			color:#ccc;
+			font-size: .2rem;
+			line-height: .35rem;
+		}
 	}
 }
 .l_ul li{
 	width:1.83rem;
 	height:2.53rem;
-	background: pink;
 	border:0.005rem solid #ccc;
 	padding:.16rem;
 	img{
@@ -33,6 +50,7 @@
 		b{
 			line-height: 25px;
 			font-size: .15rem;
+			color:#000;
 		}
 		p{
 			line-height: 20px;
@@ -42,6 +60,8 @@
 		i{
 			line-height: 30px;
 			font-weight: 600;
+			color:#000;
+
 		}
 	}
 }

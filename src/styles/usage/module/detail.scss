@@ -1,0 +1,10 @@
+.d_head{
+	background: #fff;
+	height:100%;
+	header{
+		width:100%;
+		height:.40rem;
+		@include flexbox();
+		background: pink;
+	}
+}
