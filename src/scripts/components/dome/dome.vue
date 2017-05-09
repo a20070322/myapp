@@ -12,7 +12,7 @@
 <script>
 import Vue from "vue"
 import { Loadmore } from 'mint-ui';
-import utilAxios from '../utils/axios'
+import utilAxios from '../../utils/axios'
 Vue.component(Loadmore.name, Loadmore);
 
   export default {
@@ -43,9 +43,8 @@ Vue.component(Loadmore.name, Loadmore);
     mounted: function () {
       let that = this
       utilAxios.get({
-        url: 'api/index/v1/m-nav',
+        url: 'api/goods/m-limit',
         method: 'POST',
-        data:"",
         callback: function (res) {
           console.log(res.data);
           // that.dataSource = that.dataSource.concat(res.data.subjects)
