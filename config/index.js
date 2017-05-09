@@ -41,6 +41,13 @@ module.exports = {
         pathRewrite:{
                 "^/mock":""
             }
+        },
+        "/apia":{
+            target:"http://10.17.152.192/",
+            changeOrigin:true,
+            pathRewrite:{
+                "^/apia":""
+            }
         }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"

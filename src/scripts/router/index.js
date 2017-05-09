@@ -8,7 +8,8 @@ import Home from '@/scripts/components/home'
 import Classify from '@/scripts/components/classify'
 import Cart from '@/scripts/components/cart'
 import Me from '@/scripts/components/me'
-
+import login from '@/scripts/components/me/login'
+// import dome from '@/scripts/components/dome/dome2'
 Vue.use(Router)
 export default new Router({
   routes: [
