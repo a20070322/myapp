@@ -4,8 +4,9 @@
 		<div class="c_head yo-ico">&#xe61f;</div>
     </header>
     <section>
- 	<ul class="c_ul">
-			<router-link tag="li" to="/list/${index}" key={index} v-for="(x,index) in data" >
+     <mt-loadmore :top-method="loadTop" ref="loadmore">
+ 		<ul class="c_ul">
+			<router-link tag="li" :to="`/list/${index}`" key={index} v-for="(x,index) in data" >
 				<img :src="x.icon" alt="">
 				<div class="c_ds">
 					<b>{{x.category_name}}</b>
@@ -14,7 +15,8 @@
 				<p class="c_p yo-ico">&#xf07f;</p>
 				
 			</router-link>
-	</ul>
+		</ul>
+	 </mt-loadmore>
     </section>
   </div>
 </template>
@@ -22,12 +24,25 @@
 <script>
 import Vue from "vue"
 import utilAxios from '../../utils/axios'
+
+import { Loadmore } from 'mint-ui';
+Vue.component(Loadmore.name, Loadmore);
+
 export default {
 	data(){
 		return{
 			data:[]
 		}
 	},
+	methods:{
+	    loadTop:function(){
+	      console.log(0)
+	    }
+	    // loadBottom:function(){
+	    //   console.log(1)
+	    // }
+	  },
+
 	mounted: function () {
 		let that = this
 		utilAxios.get({
