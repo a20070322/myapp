@@ -9,7 +9,6 @@
 export default {
     data(){
         return{
-           
         }
     },
     props:{
@@ -17,13 +16,13 @@ export default {
             type: String,
             //默认值
             default: ""
-            //required: true            
+            //required: true
         }
     },
     methods: {
         back: function () {
             this.$router.go(-1)
     }
-  }    
+  }
 }
 </script>

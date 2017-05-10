@@ -8,7 +8,8 @@ import Home from '@/scripts/components/home'
 import Classify from '@/scripts/components/classify'
 import Cart from '@/scripts/components/cart'
 import Me from '@/scripts/components/me'
-import login from '@/scripts/components/me/login'
+import Login from '@/scripts/components/me/login'
+import Register from '@/scripts/components/me/register'
 // import dome from '@/scripts/components/dome/dome2'
 Vue.use(Router)
 export default new Router({
@@ -45,5 +46,13 @@ export default new Router({
     //   // 详情路由
     //   path:'/details/:id'
     // }
+    {
+      path:"/login",
+      component:Login
+    },
+    {
+      path:"/register",
+      component:Register
+    }
   ]
 })

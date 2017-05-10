@@ -17,22 +17,135 @@
 @include yo-tab(
   $name:login,
   $border-width:0,
-  $bgcolor:#fff
-  
+  $bgcolor:#fff,
+  $height:0.34rem,
+  $item-border-height:0.17rem,
+  $item-border-color:#c7c7c7
 ){
-    
+
 }
 .m-login{
-    h2{
+    height:100%;
+    background:#fff;
+    .logo{
         font-size: 0.8rem;
         text-align: center;
         padding-top: 0.34rem;
         line-height: 0.4rem;
         color: #54440b;
     }
-    .navtab{
-      &>li{
-        float: left;
+    .yo-tab-login{
+      span{
+        line-height:0.34rem;
+        display: block;
+        width: 0.82rem;
+        margin: 0 auto;
+        color:#4f4f4f;
+      }
+      .active{
+        span{
+          border-bottom: 0.02rem solid #49b2e1;
+        }
       }
     }
+    .zhuce{
+        display:block;
+        padding-top: 0.16rem;
+        padding-left:0.13rem;
+        color:#636363;
+        font-size:0.12rem;
+    }
+    .weixin{
+      position: absolute;
+      bottom:0.25rem;
+      width:100%;
+      @include flexbox()
+      @include flex-direction(column)
+      // @include justify-content(center)
+      text-align:center;
+      &>span{
+        font-size:0.42rem;
+        color:#64cdfd;
+      }
+      &>b{
+        font-weight:100;
+        font-size:0.13rem;
+        line-height:0.13rem;
+        color:#0f0f0f;
+      }
+    }
+    .register{
+        border:none !important;
+      }
+    .login_form{
+      border-top:0.01rem solid #c6c6c6;
+      padding-top:0.22rem;
+      .login_mima{
+        margin-top:0.2rem !important;
+      }
+      .button{
+        margin-top:0.2rem !important;
+        input{
+            background:#64cdfd !important;
+            border:none;
+            @include flex()
+            color:#fff;
+          border-top-left-radius:0.05rem;
+          border-bottom-left-radius:0.05rem;
+          border-top-right-radius:0.05rem;
+          border-bottom-right-radius:0.05rem;
+        }
+      }
+      .input{
+        @include flexbox()
+        margin: 0 0.13rem 0 0.13rem;
+        line-height:0.42rem;
+        height: 0.42rem;
+        label{
+          height: 0.42rem;
+          width:0.69rem;
+          background:#64cdfc;
+          font:0.14rem/0.42rem "微软雅黑";
+          font-weight:900;
+          text-align:center;
+          color:#fff;
+          border-top-left-radius:0.05rem;
+          border-bottom-left-radius:0.05rem;
+          // border-top-right-radius:2em;
+          // border-bottom-right-radius:2em;
+        }
+        &>div{
+          border-top-left-radius:0.05rem;
+          border-bottom-left-radius:0.05rem;
+          border-top-right-radius:0.05rem;
+          border-bottom-right-radius:0.05rem;
+          @include flex()
+          @include flexbox()
+          background:#f5f5f5;
+          padding-left: 0.21rem;
+          &>button{
+            border:none;
+            border-top-right-radius:0.05rem;
+            border-bottom-right-radius:0.05rem;
+            background:#64cdfd;
+            width:1rem;
+            color:#fff;
+            font-size:0.12rem;
+          }
+          &>input{
+            @include flex()
+            border: none;
+            background:#f5f5f5;
+            color:#686868;
+          }
+          &>span{
+            width:0.39rem;
+            text-align:center;
+            font-size:0.19rem;
+            color:#cdcdcd;
+          }
+        }
+      }
+    }
+
 }
