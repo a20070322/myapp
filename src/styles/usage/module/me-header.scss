@@ -1,0 +1,21 @@
+.box {
+  @include yo-header(
+    $name: a,
+    $bgcolor: #fff,
+    $item-ico-color: #000,
+    $border-width: 0,
+    $color: #000,
+    $font-size: .18rem
+  ){
+    .regret {//头部左边小图标
+      left: 0;
+      padding-left:.15rem;
+  	  text-align:left;
+  	  font-size:.21rem;
+  	  color:#000;
+    }
+  }
+  .yo-header {
+    margin-bottom:.06rem;
+  }
+}
