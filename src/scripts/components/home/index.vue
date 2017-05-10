@@ -2,7 +2,7 @@
 
 	<div class="m-home">	
 	
-		<div class="yo-header yo-header-a" id="header">
+		<div class="header-a" id="header">
 			<router-link tag="div" to="/location" active-class="active" class="regret yo-ico">
 				<b>&#xe61b;</b>
 				<i>定位</i>

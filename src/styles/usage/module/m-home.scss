@@ -2,7 +2,7 @@
 .m-home {
   word-wrap:break-word;
   width: 100%;
-  .yo-header{
+  .header-a{
     @include flexbox();
     @include justify-content(space-around);
     position: fixed;
