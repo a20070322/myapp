@@ -11,11 +11,7 @@ import Location from '@/scripts/components/home/location/location'
 
 import List from '@/scripts/components/list'
 
-import login from '@/scripts/components/me/login'
 import Search from '@/scripts/components/search'
-
-
-
 
 import Details from '@/scripts/components/details'
 import Detail from '@/scripts/components/detail'
@@ -26,6 +22,8 @@ import Me_youhui from '@/scripts/components/me/me-youhui'
 import Login from '@/scripts/components/me/login'
 import Register from '@/scripts/components/me/register'
 // import dome from '@/scripts/components/dome/dome2'
+// import dome from '@/scripts/components/dome/dome2'
+
 Vue.use(Router)
 
 export default new Router({

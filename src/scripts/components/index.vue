@@ -24,10 +24,8 @@
 
 <script>
 
-
 import Vue from 'vue'
-
-export default {
+  export default {
     data() {
         return {
           scroll: ''
@@ -56,5 +54,5 @@ export default {
     mounted() {
         window.addEventListener('scroll', this.menu)
     }
-}
+  }
 </script>
