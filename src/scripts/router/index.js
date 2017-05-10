@@ -23,6 +23,9 @@ import Detail from '@/scripts/components/detail'
 import Me_info from '@/scripts/components/me/me-info'
 import Me_youhui from '@/scripts/components/me/me-youhui'
 
+import Login from '@/scripts/components/me/login'
+import Register from '@/scripts/components/me/register'
+// import dome from '@/scripts/components/dome/dome2'
 Vue.use(Router)
 
 export default new Router({
@@ -94,6 +97,18 @@ export default new Router({
     {
       path: '/location',
       component: Location
+    },
+    // {
+    //   // 详情路由
+    //   path:'/details/:id'
+    // }
+    {
+      path:"/login",
+      component:Login
+    },
+    {
+      path:"/register",
+      component:Register
     }
   ]
 })
