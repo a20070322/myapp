@@ -1,6 +1,6 @@
 <template>
   <div class="m-index">
-    <section>
+    <section @scroll="menu">
       <router-view></router-view>
     </section>
     <nav>
@@ -23,7 +23,36 @@
 </template>
 
 <script>
+
+import Vue from 'vue'
   export default {
-    
+    data() {
+        return {
+          scroll: ''
+      }
+    },
+    methods: {
+        menu() {
+            this.scroll = document.getElementsByTagName('section')[0].scrollTop;
+            let scroll = this.scroll;
+            //console.log(this.scroll)
+            let Header = document.getElementById('header')
+            //console.log(Header);
+            if ( scroll == 0){
+                Header.style.background = 'rgba(10,153,212,0)'
+            }
+            else if( 20 > scroll > 0 ) {
+              Header.style.background = 'rgba(10,153,212,0.3)'
+            }else if( 20<scroll<40){
+              Header.style.background = 'rgba(10,153,212,0.6)'
+            }else if( 40<scroll<60){
+              Header.style.background = 'rgba(10,153,212,1)'
+            }
+
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.menu)
+    }
   }
 </script>

@@ -1,4 +1,4 @@
-Vue.config.productionTip = false
+Vue.config.productionTip = false //
 
 require('./styles/app.scss')
 
@@ -11,3 +11,4 @@ new Vue({
   router,
   template: '<router-view></router-view>'
 })
+

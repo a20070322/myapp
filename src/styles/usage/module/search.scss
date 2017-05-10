@@ -1,0 +1,67 @@
+@import "../fragment/yo-search";
+
+@include yo-search(
+  $name: a,
+  $cancel-color: #333
+){
+  height: .35rem !important;
+};
+
+.m-search {
+  @include flex();
+  width: 100%;
+  position: relative;
+
+  @include flexbox();
+  @include flex-direction(column);
+  .s_p{
+    color:#ccc;
+  }
+
+  .result {
+    margin-top: .05rem;
+    @include flex();
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .yo-list li {
+    @include border(0);
+    padding: 0;
+  }
+  dl {
+    @include flexbox();
+    @include border(0 0 1px 0, #eee);
+    width: 100%;
+    padding: .1rem .2rem;
+    height: 1.04rem;
+    dt {
+      width: .64rem;
+      height: .84rem;
+      margin-right: .1rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    dd:nth-child(2) {
+      @include flex();
+      h1 {
+        font-size: .16rem;
+      }
+      p:nth-child(2) {
+        font-size: .12rem;
+        color: #c0c0c0;
+        margin-bottom: .075rem;
+      }
+      p:nth-child(3) {
+        font-size: .12rem;
+        color: #999;
+        margin-bottom: .075rem;
+      }
+    }
+    dd:nth-child(3) {
+      height: .24rem;
+    }
+  }
+}
