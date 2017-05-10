@@ -7,11 +7,13 @@ import Classify from '@/scripts/components/classify'
 import Cart from '@/scripts/components/cart'
 import Me from '@/scripts/components/me'
 
+import Location from '@/scripts/components/home/location/location'
+
 import List from '@/scripts/components/list'
 
 import login from '@/scripts/components/me/login'
 import Search from '@/scripts/components/search'
-// import dome from '@/scripts/components/dome/dome2'
+
 
 
 
@@ -20,9 +22,9 @@ import Detail from '@/scripts/components/detail'
 
 import Me_info from '@/scripts/components/me/me-info'
 import Me_youhui from '@/scripts/components/me/me-youhui'
-// >>>>>>> zxd
 
 Vue.use(Router)
+
 export default new Router({
   routes: [
     {
@@ -34,7 +36,7 @@ export default new Router({
         {
           //首页
           path: '/home',
-          component: Home
+          component: Home,
         },
         {
           //分类
@@ -50,11 +52,12 @@ export default new Router({
           //我的
           path:'/me',
           component:Me
-        }
+        },
+
       ]
     },
     {
-// <<<<<<< HEAD
+
       // 详情路由
       path:'/details/:id',
       component:Details,
@@ -82,7 +85,15 @@ export default new Router({
       //我的页子页--优惠券页
       path:'/me-youhui',
       component:Me_youhui
-// >>>>>>> zxd
+
+    },
+    {
+      path: '/search',
+      component: Search
+    },
+    {
+      path: '/location',
+      component: Location
     }
   ]
 })
