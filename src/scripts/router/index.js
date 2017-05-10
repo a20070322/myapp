@@ -10,6 +10,12 @@ import Cart from '@/scripts/components/cart'
 import Me from '@/scripts/components/me'
 import login from '@/scripts/components/me/login'
 // import dome from '@/scripts/components/dome/dome2'
+
+
+
+import Details from '@/scripts/components/details'
+import Detail from '@/scripts/components/detail'
+
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -41,9 +47,14 @@ export default new Router({
         }
       ]
     },
-    // {
-    //   // 详情路由
-    //   path:'/details/:id'
-    // }
+    {
+      // 详情路由
+      path:'/details/:id',
+      component:Details,
+    },
+    {
+      path:'/detail/:id',
+      component:Detail,
+    }
   ]
 })
