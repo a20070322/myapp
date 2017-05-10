@@ -1,0 +1,149 @@
+@import "../fragment/yo-header";
+
+.me {
+  @include yo-header(
+    $name: a,
+    $bgcolor: #fff,
+    $item-ico-color: #000,
+    $border-width: 0,
+    $color: #000,
+    $font-size: .18rem
+  ){
+    .regret {//头部左边小图标
+      left: 0;
+      padding-left:.15rem;
+  	  text-align:left;
+  	  font-size:.21rem;
+  	  color:#000;
+    }
+  }
+
+
+  .yo-header {
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+  }
+
+  .info {
+    width:100%;
+    height:1.165rem;
+    background:url(/static/images/2.jpg) no-repeat 0 bottom #0091da;
+    background-size:100%;
+    margin-top:.44rem;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-direction(column);
+    
+    div {
+      width:.6rem;
+      height:.6rem;
+      img {
+        width:.6rem;
+        height:.6rem;
+      }
+    }
+    span {
+      width:.8rem;
+      height:.36rem;
+      color:#fff;
+      font-size:.18rem;
+      text-align:center;
+    }
+  }
+
+  .collect {
+    width:100%;
+    height:.5rem;
+    @include flexbox();
+
+    div {
+      width:50%;
+      height:.5rem;
+      background:#2796ce;
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+      color:#fff;
+    }
+    div:nth-child(1) {
+      margin-right:.01rem;
+    }
+  }
+
+  .me_center {
+    width:100%;
+    background:#f5f5f5;
+    overflow-y:scroll;
+    .me_box {
+      width:100%;
+      height:1.1rem;
+      margin-bottom:.1rem;
+      background:#fff;
+      .title {
+        width:95%;
+        margin-left:5%;
+        height:.48rem;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        padding:0 .13rem 0 0;
+        border-bottom:1px solid #f6f6f6;
+        h3 {
+          color:#999;
+        }
+      }
+      .choose {
+        width:100%;
+        height:.6rem;
+        @include flexbox();
+        @include justify-content(space-around);
+        div,.little {
+          @include flexbox();
+          @include flex-direction(column);
+          @include justify-content(center);
+          @include align-items(center);
+          h3 {
+            color:#848484;
+            font-weight:normal;
+          }
+          span {
+            font-size:.18rem;
+            color:#848484;
+          }
+        }
+      }
+    }
+    .server {
+      width:100%;
+      height:.97rem;
+      background:#fff;
+      margin-bottom:.1rem;
+      div {
+        width:95%;
+        margin-left:5%;
+        height:.48rem;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        padding:0 .13rem 0 0;
+        border-bottom:1px solid #f6f6f6;
+        h3 {
+          color:#999;
+        }
+      }
+      div:nth-child(2) {
+        border:0;
+      }
+    }
+
+    .about {
+      height:.44rem;
+    }
+   
+  }
+
+}

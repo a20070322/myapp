@@ -29,7 +29,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         "/api":{
-            target:"http://api.maixian.com/",
+            target:"http://api.maixian.com",
             changeOrigin:true,
             pathRewrite:{
                 "^/api":""
@@ -40,6 +40,13 @@ module.exports = {
         changeOrigin:true,
         pathRewrite:{
                 "^/mock":""
+            }
+        },
+        "/apia":{
+            target:"http://10.17.152.192/",
+            changeOrigin:true,
+            pathRewrite:{
+                "^/apia":""
             }
         }
     },

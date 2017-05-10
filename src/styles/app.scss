@@ -6,4 +6,35 @@
 
 @import "./usage/module/m-index";
 
-@import "./usage/module/m-index_2.scss"
+
+@import "./usage/module/m-index_2.scss";
+
+@import "./usage/module/m-login";
+
+@import "./usage/module/classify";
+
+@import "./usage/module/cart";
+
+@import "./usage/module/list";
+
+@import "./usage/module/detail";
+
+@import "./usage/module/m-login";
+
+@import "./usage/module/search";
+// >>>>>>> yx
+// =======
+//我的页样式
+@import "./usage/module/m-me";
+//我的页中信息页的样式
+@import "./usage/module/me-info";
+//我的页中信息页的样式
+@import "./usage/module/me-header";
+//我的页中优惠券页的样式
+@import "./usage/module/me-youhui";
+//home页样式
+//@import "./usage/module/m-home";
+// >>>>>>> zxd
+// =======
+
+@import "./usage/module/m-home";

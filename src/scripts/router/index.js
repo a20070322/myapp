@@ -10,9 +10,11 @@ import Cart from '@/scripts/components/cart'
 import Me from '@/scripts/components/me'
 
 
-
 import Details from '@/scripts/components/details'
 import Detail from '@/scripts/components/detail'
+
+import login from '@/scripts/components/me/login'
+// import dome from '@/scripts/components/dome/dome2'
 
 Vue.use(Router)
 export default new Router({
