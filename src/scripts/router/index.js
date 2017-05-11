@@ -9,6 +9,7 @@ import List from '@/scripts/components/list'
 
 import login from '@/scripts/components/me/login'
 import Search from '@/scripts/components/search'
+// import S_list from '@/scripts/components/s_list'
 // import dome from '@/scripts/components/dome/dome2'
 Vue.use(Router)
 export default new Router({
@@ -52,6 +53,11 @@ export default new Router({
      path:'/search',
      component:Search
     }
-     
+    // {
+    //   //搜索引擎
+    //   path:'/s_list/:id',
+    //   component:S_list
+    //  }
   ]
+    
 })
