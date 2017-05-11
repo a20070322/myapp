@@ -72,7 +72,7 @@
       <div class="dl_head">
         <img :src="dataSource_dl[index].banner.sale_label" >
       </div>
-      <router-link :to="`/details/${index}`" tag="div" class="dl_banner">
+      <router-link :to="`/list/${index}`" tag="div" class="dl_banner">
       <!-- <div class="dl_banner"> -->
         <img :src="dataSource_dl[index].banner.category_img">
       <!-- </div> -->

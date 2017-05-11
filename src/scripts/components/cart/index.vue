@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="cart" v-if>
+ <!--  <div class="cart" v-if>
   	<header>
 		购物车
   	</header>
@@ -12,10 +12,10 @@
      
   	</section>
   	
-  </div>
+  </div> -->
 
 
-   <!-- <div class="carts" v-else>
+   <div class="carts" v-else>
     <header>
     购物车
     <span class="c_span">编辑</span>
@@ -43,7 +43,7 @@
      
     </section>
     
-  </div> -->
+  </div>
 </template>
 
 <script>
