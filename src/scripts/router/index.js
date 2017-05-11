@@ -12,6 +12,7 @@ import Location from '@/scripts/components/home/location/location'
 import List from '@/scripts/components/list'
 
 import Search from '@/scripts/components/search'
+<<<<<<< HEAD
 
 import Details from '@/scripts/components/details'
 import Detail from '@/scripts/components/detail'
@@ -22,6 +23,9 @@ import Me_youhui from '@/scripts/components/me/me-youhui'
 import Login from '@/scripts/components/me/login'
 import Register from '@/scripts/components/me/register'
 // import dome from '@/scripts/components/dome/dome2'
+=======
+// import S_list from '@/scripts/components/s_list'
+>>>>>>> yx
 // import dome from '@/scripts/components/dome/dome2'
 
 Vue.use(Router)
@@ -108,5 +112,14 @@ export default new Router({
       path:"/register",
       component:Register
     }
+<<<<<<< HEAD
+=======
+    // {
+    //   //搜索引擎
+    //   path:'/s_list/:id',
+    //   component:S_list
+    //  }
+>>>>>>> yx
   ]
+    
 })

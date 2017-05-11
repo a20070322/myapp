@@ -1,19 +1,25 @@
+@import "../fragment/yo-search";
 .list{
 	background: #fff;
 	height:100%;
+	 position: relative;
 	@include flexbox();
 	@include flex-direction(column);
 	header{
 		@include flexbox();
 		width:100%;
 		height:.40rem;
+		background: #fff;
 		.l_pp{
 			font-weight: 600;
 			color:#ccc;
-			line-height: .45rem;
+			line-height: .34rem;
+			margin-right:.1rem;
 		}
-		.l_head{
+		.action{
+			background:#f2f2f2!important;
 			@include flex();
+
 			.l_span{
 				width:.27rem;
 				height:.27rem;
@@ -25,15 +31,18 @@
 				height:.27rem;
 				outline: none;
 				border-radius:7px;
-				background: #f2f2f2;
+				background: #f2f2f2!important;
 				color:#ccc;
-				font-size: .12rem;
+				font-size: .14rem;
+				border:.01rem solid #ccc!important;
+				height:.26rem!important;
 			}
 		}
 		.l_p{
 			color:#ccc;
 			font-size: .2rem;
-			line-height: .35rem;
+			line-height: .24rem;
+			margin-left: .1rem;
 		}
 	}
 }
