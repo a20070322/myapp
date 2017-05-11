@@ -8,6 +8,7 @@ import Cart from '@/scripts/components/cart'
 import Me from '@/scripts/components/me'
 import Me_info from '@/scripts/components/me/me-info'
 import Me_youhui from '@/scripts/components/me/me-youhui'
+import Me_login from '@/scripts/components/me/me-login'
 
 Vue.use(Router)
 export default new Router({
@@ -49,6 +50,11 @@ export default new Router({
       //我的页子页--优惠券页
       path:'/me-youhui',
       component:Me_youhui
+    },
+    {
+      //login页
+      path:'/me-login',
+      component:Me_login
     }
   ]
 })
