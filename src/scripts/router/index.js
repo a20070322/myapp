@@ -23,6 +23,8 @@ import Detail from '@/scripts/components/detail'
 import Me_info from '@/scripts/components/me/me-info'
 import Me_youhui from '@/scripts/components/me/me-youhui'
 
+
+import Navlist0 from '@/scripts/components/home/navlist/navlist0'
 Vue.use(Router)
 
 export default new Router({
@@ -94,6 +96,10 @@ export default new Router({
     {
       path: '/location',
       component: Location
+    },
+    {
+      path:'/navlist0',
+      component: Navlist0
     }
   ]
 })

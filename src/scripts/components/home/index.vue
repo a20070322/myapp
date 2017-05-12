@@ -26,14 +26,15 @@
 
 		<div class="nav_list">
 			<ul>
-				<li v-for="(item,index) in navList" :key="index">
+				<router-link tag="li" :to="`/${arr[index]}`" v-for="(item,index) in navList" :key="index">
 					<span>
 						<img :src="item.img_id" alt="">
 					</span>
 					<strong>
 						{{item.label}}
 					</strong>
-				</li>
+				</router-link>
+
 			</ul>
 		</div>
 
@@ -92,6 +93,12 @@ import utilAxios from '../../utils/axios'
 				navList:[],
 				hdList:[],
 				topStatus: '',
+				arr:[
+					'navlist0',
+					'me-youhui',
+					'caipu',
+					"classify"
+				]
 			}
 		},
 		mounted: function () {
@@ -131,8 +138,7 @@ import utilAxios from '../../utils/axios'
 			},
 			handleTopChange(status) {
        			this.topStatus = status;
-      		}
-      		
+      		}    		
 		}
 	}
 

@@ -44,7 +44,7 @@ export default {
                 Header.style.background = 'rgba(10,153,212,0)'
             }
             else if( 20 > scroll > 0 ) {
-              Header.style.background = 'rgba(10,153,212,0.3)'
+              Header.style.background = 'rgba(10,153,212,0.4)'
             }else if( 20<scroll<40){
               Header.style.background = 'rgba(10,153,212,0.6)'
             }else if( 40<scroll<60){
