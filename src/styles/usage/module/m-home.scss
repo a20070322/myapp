@@ -65,7 +65,7 @@
       width: 100%;
     }
   }
-  .nav_list {   
+  .nav_list {
     width: 100%;
     height: 2.23rem;
     margin-bottom:0.03rem;
@@ -91,7 +91,7 @@
         font-size:0.14rem;
       }
       }
-    }   
+    }
   }
   .mxtop {
     @include flexbox();
@@ -126,7 +126,7 @@
         overflow:hidden;
         ul{
           width:100%;
-          position: absolute;         
+          position: absolute;
           height:0.30rem;
           left:0;
           top:0;
@@ -167,7 +167,7 @@
               width :0.5rem;
               height:0.5rem;
             }
-          }         
+          }
         }
         .hd_right {
           @include flexbox();

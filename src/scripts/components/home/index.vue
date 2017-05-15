@@ -107,26 +107,34 @@ Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 import utilAxios from '../../utils/axios'
 
-	export default {
+export default {
+  data(){
+    return {
+      dataSource_dl:[],
+      dataSource: [],
+      mxTop:[],
+      navList:[],
+      hdList:[],
+      topStatus: '',
+        arr:[
+            'navlist0',
+            'me-youhui',
+            'caipu',
+            "classify"
+        ]      
+    }
+  },
+  mounted:function(){
+    let _this = this
+    utilAxios.get({
+      url:'api/index/v1/m-category',
+      method:'POST',
+      callback(res){
+        console.log(res.data.data.category)
+        _this.dataSource_dl = res.data.data.category
+    }})
 
-		data() {
-			return {
-                dataSource_dl:[],
-				dataSource: [],
-				mxTop:[],
-				navList:[],
-				hdList:[],
-				topStatus: '',
-				arr:[
-					'navlist0',
-					'me-youhui',
-					'caipu',
-					"classify"
-				]
-			}
-		},
 
-		mounted: function () {
 			let that = this
 			utilAxios.get({
 				url: 'api/index/v1/m-banner',
@@ -156,24 +164,16 @@ import utilAxios from '../../utils/axios'
 					that.hdList = that.hdList.concat(res.data.data.item)
 				}
 			})
-            utilAxios.get({
-                  url:'api/index/v1/m-category',
-                  method:'POST',
-                  callback(res){
-                    console.log(res.data.data.category)
-                    that.dataSource_dl = res.data.data.category
-                }
-            })
-
 		},
-
 		methods:{
-			loadTop() {
+			loadTop() { 				
   				this.$refs.loadmore.onTopLoaded();
 			},
 			handleTopChange(status) {
        			this.topStatus = status;
-      		}
+      		}    		
 		}
-	}
+
+    }
+    
 </script>
