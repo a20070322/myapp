@@ -24,6 +24,8 @@ import Register from '@/scripts/components/me/register'
 // import dome from '@/scripts/components/dome/dome2'
 // import dome from '@/scripts/components/dome/dome2'
 
+
+import Navlist0 from '@/scripts/components/home/navlist/navlist0'
 Vue.use(Router)
 
 export default new Router({
@@ -107,6 +109,10 @@ export default new Router({
     {
       path:"/register",
       component:Register
+    },
+    {
+      path:'/navlist0',
+      component: Navlist0
     }
   ]
 })

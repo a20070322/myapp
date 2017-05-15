@@ -24,14 +24,15 @@
 
 		<div class="nav_list">
 			<ul>
-				<li v-for="(item,index) in navList" :key="index">
+				<router-link tag="li" :to="`/${arr[index]}`" v-for="(item,index) in navList" :key="index">
 					<span>
 						<img :src="item.img_id" alt="">
 					</span>
 					<strong>
 						{{item.label}}
 					</strong>
-				</li>
+				</router-link>
+
 			</ul>
 		</div>
 
@@ -105,64 +106,74 @@ Vue.component(Loadmore.name, Loadmore);
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 import utilAxios from '../../utils/axios'
-export default {
-  data(){
-    return {
-      dataSource_dl:[],
-      dataSource: [],
-      mxTop:[],
-      navList:[],
-      hdList:[],
-      topStatus: '',
-    }
-  },
-  mounted:function(){
-    let _this = this
-    utilAxios.get({
-      url:'api/index/v1/m-category',
-      method:'POST',
-      callback(res){
-        console.log(res.data.data.category)
-        _this.dataSource_dl = res.data.data.category
 
-    }})
-    let that = this
-    utilAxios.get({
-      url: 'api/index/v1/m-banner',
-      method: 'POST',
-      callback: function (res) {
-        that.dataSource = that.dataSource.concat(res.data.data.banner)
-        //console.log(res);
-        // that.mxTop = that.mxTop.concat(res.data.data.headline)
-        let arr = that.mxTop.concat(res.data.data.headline)
-        arr[arr.length] = arr[0]
-        that.mxTop = arr;
-        //console.log(arr[0]);
-      }
-    })
-    utilAxios.get({
-      url: 'api/index/v1/m-nav',
-      method: 'POST',
-      callback: function (res) {
-        that.navList = that.navList.concat(res.data.data.nav)
-        //console.log(res);
-      }
-    })
-    utilAxios.get({
-      url: 'api/index/v1/m-activity',
-      method: 'POST',
-      callback: function (res) {
-        that.hdList = that.hdList.concat(res.data.data.item)
-      }
-    })
-  },
-  methods:{
-    loadTop() {
-        this.$refs.loadmore.onTopLoaded();
-    },
-    handleTopChange(status) {
-          this.topStatus = status;
-  }
-}
-}
+	export default {
+
+		data() {
+			return {
+                dataSource_dl:[],
+				dataSource: [],
+				mxTop:[],
+				navList:[],
+				hdList:[],
+				topStatus: '',
+				arr:[
+					'navlist0',
+					'me-youhui',
+					'caipu',
+					"classify"
+				]
+			}
+		},
+
+		mounted: function () {
+			let that = this
+			utilAxios.get({
+				url: 'api/index/v1/m-banner',
+				method: 'POST',
+				callback: function (res) {
+					that.dataSource = that.dataSource.concat(res.data.data.banner)
+					//console.log(res);
+					// that.mxTop = that.mxTop.concat(res.data.data.headline)
+					let arr = that.mxTop.concat(res.data.data.headline)
+					arr[arr.length] = arr[0]
+					that.mxTop = arr;
+					//console.log(arr[0]);
+				}
+			})
+			utilAxios.get({
+				url: 'api/index/v1/m-nav',
+				method: 'POST',
+				callback: function (res) {
+					that.navList = that.navList.concat(res.data.data.nav)
+					//console.log(res);
+				}
+			})
+			utilAxios.get({
+				url: 'api/index/v1/m-activity',
+				method: 'POST',
+				callback: function (res) {
+					that.hdList = that.hdList.concat(res.data.data.item)
+				}
+			})
+            utilAxios.get({
+                  url:'api/index/v1/m-category',
+                  method:'POST',
+                  callback(res){
+                    console.log(res.data.data.category)
+                    that.dataSource_dl = res.data.data.category
+                }
+            })
+
+		},
+
+		methods:{
+			loadTop() {
+  				this.$refs.loadmore.onTopLoaded();
+			},
+			handleTopChange(status) {
+       			this.topStatus = status;
+      		}
+		}
+	}
 </script>
