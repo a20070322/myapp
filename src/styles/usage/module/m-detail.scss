@@ -1,0 +1,184 @@
+
+.dl_detail{
+  @include flexbox();
+  @include flex-direction(column);
+  height: 100%;
+  width: 100%;
+  .det_head{
+    background: #fff;
+    width: 100%;
+    height: 0.4rem;
+    @include flexbox();
+    @include flex-direction(row);
+    .det_back{
+      width: .5rem;
+      height: 100%;
+      text-align: center;
+      line-height: .4rem;
+      font-size: .18rem;
+    }
+    p{
+      @include flex(1);
+      text-align: center;
+      line-height: .4rem;
+      font-size: .16rem;
+      font-weight: 500;
+    }
+    .share{
+      width: .5rem;
+      height: 100%;
+      text-align: center;
+      line-height: .4rem;
+      font-size: .18rem;
+    }
+  }
+  .det_con{
+    @include flexbox();
+    @include flex(1);
+    @include flex-direction(column);
+    width: 100%;
+    .det_c_con{
+      @include flex(1);
+      overflow-y:scroll;
+      width: 100%;
+      .mint-swipe {
+        width: 100%;
+        height: 4rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .mint-swipe-indicator{
+          border:.01rem solid #000;
+        }
+      }
+      .det_city{
+        min-height: .68rem;
+        background: #fff;
+        position: relative;
+        img{
+          // display: block;
+          width: .2rem;
+          height: .12rem;
+          position: absolute;
+          left: .03rem;
+          top: 0;
+        }
+        p:nth-child(1){
+          width: 100%;
+          text-align: center;
+          font-size: .16rem;
+        }
+        p:nth-child(2){
+          width: 100%;
+          text-align: center;
+          font-size: .12rem;
+          color: #e1e1e1;
+        }
+        p:nth-child(3){
+          width: 100%;
+          text-align: center;
+          font-size: .15rem;
+        }
+      }
+      .det_favo{
+        height: .4rem;
+        background: #fff;
+        position: relative;
+        text-align: center;
+        line-height: .4rem;
+      }
+      .det_point{
+        position: absolute;
+        right:0;
+        top:0;
+        height: 100%;
+        width: .4rem;
+        text-align: center;
+        line-height: .4rem;
+        color:#cdccc6;
+      }
+      .det_ps{
+        position: relative;
+        width: 100%;
+        height: .7rem;
+        background: #fff;
+        .ps_ico{
+          width: 100%;
+          height: 100%;
+          .ps_post{
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            color:#eee;
+            line-height: .35rem;
+          }
+          .ps_yow{
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            font-size: .12rem
+          }
+        }
+        .ps_dw{
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          text-align: center;
+          width: .5rem;
+          line-height: .7rem;
+
+        }
+      }
+      .det_comment{
+        height:.7rem;
+        background: #fff;
+        position: relative;
+      }
+      .det_foot{
+        height: .4rem;
+        width: 100%;
+        color: #000;
+        text-align: center;
+        line-height: .4rem;
+      }
+    }
+    .det_nav{
+      @include flexbox();
+      @include flex-direction(row);
+      width: 100%;
+      height:.5rem;
+      background: #fff;
+      .det_nav_ser{
+        width: 16%;
+        height: 100%;
+        text-align: center;
+        padding-top:.05rem ;
+      }
+      .det_nav_col{
+        width: 16%;
+        height: 100%;
+        text-align: center;
+        padding-top:.05rem;
+        border-left: .01rem solid #eee;
+        border-right: .01rem solid #eee;
+      }
+      .det_nav_car{
+        width: 16%;
+        height: 100%;
+        text-align: center;
+        padding-top:.05rem ;
+      }
+      .det_nav_cho{
+        @include flex(1);
+        text-align: center;
+        line-height: .5rem;
+        background: #0091da;
+        color: #fff;
+      }
+    }
+}
+
+
+}

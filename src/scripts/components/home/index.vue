@@ -118,18 +118,27 @@ export default {
   },
   mounted:function(){
     let _this = this
-    utilAxios.get({
-      url:'api/index/v1/m-category',
-      method:'POST',
-      callback(res){
-        console.log(res.data.data.category)
-        _this.dataSource_dl = res.data.data.category
+    // utilAxios.get({
+    //   url:'api/index/v1/m-category',
+    //   method:'POST',
+    //   callback(res){
+    //     console.log(res.data.data.category)
+    //     _this.dataSource_dl = res.data.data.category
+    //
+    // }})
+      utilAxios.get({//php
+        url:'http://zzyapp.applinzi.com/api/home.php?type=category',
+        method:'GET',
+        callback:function(res){
+          // console.log(res)
+          _this.dataSource_dl = res.data.data.category
+        }
+      })
 
-    }})
     let that = this
     utilAxios.get({
-      url: 'api/index/v1/m-banner',
-      method: 'POST',
+      url: 'http://zzyapp.applinzi.com/api/home.php?type=banner',
+      method: 'GET',
       callback: function (res) {
         that.dataSource = that.dataSource.concat(res.data.data.banner)
         //console.log(res);
