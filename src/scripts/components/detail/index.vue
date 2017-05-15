@@ -7,6 +7,8 @@
   </div>
   <div style="height:0.01rem;opacity:0"></div>
   <div class="det_con">
+    <mt-loadmore :bottom-method="loadBottom" @bottom-status-change="handleTopChange">
+
     <div class="det_c_con">
       <mt-swipe :auto="4000" :show-indicators="true">
   		  <mt-swipe-item :key="index" v-for="(item,index) in dataSource.img">
@@ -22,7 +24,7 @@
       <div style="height:0.01rem;opacity:0"></div>
       <div class="" style="position:relative">
         <div class="det_favo" v-text="`${yh} ● ${mj}`"></div>
-        <div class="det_point">•&nbsp;•&nbsp;•</div>
+        <div class="det_point"  @click="btn_popup">•&nbsp;•&nbsp;•</div>
       </div>
       <div class="" style="text-align:center;line-height:.3rem;height:.3rem">
         正品 ● 海外 ● 冷链 ● 配送
@@ -37,7 +39,7 @@
           <div class="ps_post" v-text = "`送至 ${ps}`"></div>
           <div class="ps_yow" v-text = "`${yow} ${msg}`"></div>
         </div>
-        <p class="yo-ico ps_dw">&#xe61b;</p>
+        <p class="yo-ico ps_dw" @click="btn_picker">&#xe61b;</p>
       </div>
       <div style="height:0.05rem;opacity:0"></div>
       <div class="det_comment">
@@ -46,8 +48,13 @@
       <div class="det_foot">
         <p>继续拖动查看图文详情</p>
       </div>
-
     </div>
+    <div slot="bottom" class="mint-loadmore-bottom">
+      <span v-show="bottomStatus !== 'loading'" :class="{ 'rotate': bottomStatus === 'drop' }">↓</span>
+      <span v-show="bottomStatus === 'loading'">Loading...</span>
+    </div>
+    </mt-loadmore>
+
     <div class="det_nav">
       <div class="det_nav_ser yo-ico" style="color:#0091da;font-size:.16rem">&#xe61c;</br><span style="color:#888;font-size:.12rem;">客服</span></div>
       <div class="det_nav_col yo-ico" style="color:#888;font-size:.16rem">&#xe639;</br><span style="font-size:.12rem;">收藏</span></div>
@@ -58,12 +65,26 @@
   <transition name="fold">
     <div v-show="false" class="example"></div>
   </transition>
-  <Popup show="true">
-      Popup content
-  </Popup>
+  <mt-popup v-model="popup_B" position="bottom" pop-transition="popup-fade">
+    <div class="det_cx" style="width:100%;height:1.5rem;text-align:center">
+      促销！！
+    </div>
+  </mt-popup>
+  <mt-popup v-model="popup_S" position="bottom" pop-transition="popup-fade">
+    <mt-picker :slots="slots" @change="onValuesChange">
+    </mt-picker>
+  </mt-popup>
 
-
+  <mt-popup
+  v-model="popup_detail"
+  position="bottom">
+  <div class="" style="width:100%;height:100%">
+    111
+  </div>
+  </mt-popup>
 </div>
+
+
 
 </template>
 <script>
@@ -73,9 +94,13 @@ import { Swipe, SwipeItem } from 'mint-ui'
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 import { Lazyload } from 'mint-ui'
+import { Popup } from 'mint-ui';
+import { Picker } from 'mint-ui';
+import { Loadmore } from 'mint-ui';
 
-import { Popup } from '../../../../node_modules/yo3/component/popup'
-
+Vue.component(Loadmore.name, Loadmore);
+Vue.component(Picker.name, Picker);
+Vue.component(Popup.name, Popup);
 Vue.use(Lazyload)
 export default {
   data(){
@@ -94,12 +119,49 @@ export default {
       gg:'',
       ps:'',
       yow:'',
-      msg:''
+      msg:'',
+      toStatus:'',
+      popup_B:false,
+      popup_S:false,
+      popup_detail:false,
+      bottomStatus:'drop',
+      slots:[
+        {
+          flex: 1,
+          values: ['黑龙江',"北京"],
+          className: 'slot1',
+          textAlign: 'right'
+        }, {
+          divider: true,
+          content: '-',
+          className: 'slot2'
+        }, {
+          flex: 1,
+          values: ['佳木斯', '哈尔滨', '牡丹江', '鹤岗', '绥化', '鸡西'],
+          className: 'slot3',
+          textAlign: 'left'
+        }
+      ]
 
     }
   },
   methods:{
-
+    btn_popup:function(){
+      this.popup_B = !this.popup_B
+    },
+    onValuesChange:function(picker, values){
+      console.log(values)
+    },
+    btn_picker:function(){
+      this.popup_S = !this.popup_S
+    },
+    handleTopChange(status) {
+      this.bottomStatus = status;
+    },
+    loadBottom(){
+      this.bottomStatus = 'loading'
+      this.popup_detail = !this.popup_detail
+    }
   },
   mounted:function(){
     let _this = this
