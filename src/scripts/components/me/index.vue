@@ -8,7 +8,7 @@
   			</mt-actionsheet>
 		</div>
 		<!-- info -->
-		<router-link class="info" to="./me-info">
+		<router-link class="info" to="/login">
 			<div><img src="/static/images/1.jpg"></div>
 			<span>登录/注册</span>
 		</router-link>

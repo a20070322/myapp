@@ -13,7 +13,6 @@
 					<p>{{x.sub_category}}</p>
 				</div>
 				<p class="c_p yo-ico">&#xf07f;</p>
-				
 			</router-link>
 		</ul>
 	 </mt-loadmore>

@@ -16,6 +16,7 @@
       </ul>
       <span @click="all" v-model="b">全选</span>
     </div>
+  	</section>
   </div>
 </template>
 <script>

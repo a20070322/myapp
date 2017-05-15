@@ -19,13 +19,10 @@ import Detail from '@/scripts/components/detail'
 import Me_info from '@/scripts/components/me/me-info'
 import Me_youhui from '@/scripts/components/me/me-youhui'
 import Me_login from '@/scripts/components/me/me-login'
-
 import Login from '@/scripts/components/me/login'
 import Register from '@/scripts/components/me/register'
 // import dome from '@/scripts/components/dome/dome2'
 // import dome from '@/scripts/components/dome/dome2'
-
-
 import Navlist0 from '@/scripts/components/home/navlist/navlist0'
 Vue.use(Router)
 

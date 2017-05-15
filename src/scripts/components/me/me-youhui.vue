@@ -13,7 +13,6 @@
 		   <tab-con v-if="active==1" num="2"></tab-con>
 		   <tab-con v-if="active==2" num="3"></tab-con>
 		</div>
-		
 	</div>
 </template>
 
@@ -38,6 +37,4 @@
 			}
 		}
 	}
-	
-	
 </script>

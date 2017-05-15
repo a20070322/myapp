@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <template lang="html">
 
   <div class="m-home">
@@ -33,7 +32,6 @@
 						{{item.label}}
 					</strong>
 				</router-link>
-
 			</ul>
 		</div>
 
@@ -107,7 +105,6 @@ Vue.component(Loadmore.name, Loadmore);
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 import utilAxios from '../../utils/axios'
-
 export default {
   data(){
     return {
@@ -176,5 +173,4 @@ export default {
 		}
 
     }
-    
 </script>
