@@ -7,7 +7,7 @@
   </div>
   <div style="height:0.01rem;opacity:0"></div>
   <div class="det_con">
-    <mt-loadmore :bottom-method="loadBottom" @bottom-status-change="handleTopChange">
+    <mt-loadmore :bottom-method="loadBottom" @bottom-status-change="handleTopChange" ref="loadmore">
 
     <div class="det_c_con">
       <mt-swipe :auto="4000" :show-indicators="true">
@@ -78,7 +78,7 @@
   <mt-popup
   v-model="popup_detail"
   position="bottom">
-  <div class="" style="width:100%;height:100%">
+  <div class="" style="width:100%;height:7rem">
     111
   </div>
   </mt-popup>
@@ -161,6 +161,7 @@ export default {
     loadBottom(){
       this.bottomStatus = 'loading'
       this.popup_detail = !this.popup_detail
+      this.$refs.loadmore.onBottomLoaded();
     }
   },
   mounted:function(){
