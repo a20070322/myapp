@@ -24,9 +24,13 @@ import utilAxios from '../../utils/axios'
           console.log(res)
         }
       })
-
-
-
+      utilAxios.get({
+        url:'http://zzyapp.applinzi.com/api/class.php?type=search',
+        method:'GET',
+        callback:function(res){
+          console.log(res)
+        }
+      })
   }
   };
 </script>

@@ -132,6 +132,9 @@
             color:#fff;
             font-size:0.12rem;
           }
+          .buttonyzm{
+            background:#ccc;
+          }
           &>input{
             @include flex()
             border: none;
