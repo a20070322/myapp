@@ -1,9 +1,9 @@
 <template lang="html">
 	<!-- 头部 -->
 	<header class="yo-header yo-header-a">
-		<span class="regret yo-ico" v-if="isShowBack">&#xf07e;</span>
+		<span class="affirm yo-ico" v-if="isShowBack">添加</span>
 		<h2 class="title">{{title}}</h2>
-		<span class="regret left yo-ico" @click="back">&#xf07d;</span>
+		<span class="regret yo-ico" @click="back">&#xf07d;</span>
 	</header>
 </template>
 

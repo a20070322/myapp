@@ -62,9 +62,6 @@
 </template>
 <script>
 	import Vue from 'vue'
-    //引入Header组件，定义一个组件名
-    import Header from './me-header.vue'
-    Vue.component('Header', Header)
 
     import { Actionsheet } from 'mint-ui';
 	Vue.component(Actionsheet.name, Actionsheet);

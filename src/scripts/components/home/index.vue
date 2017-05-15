@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template lang="html">
 
   <div class="m-home">

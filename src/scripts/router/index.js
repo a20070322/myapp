@@ -18,6 +18,7 @@ import Detail from '@/scripts/components/detail'
 
 import Me_info from '@/scripts/components/me/me-info'
 import Me_youhui from '@/scripts/components/me/me-youhui'
+import Me_login from '@/scripts/components/me/me-login'
 
 import Login from '@/scripts/components/me/login'
 import Register from '@/scripts/components/me/register'
@@ -114,5 +115,10 @@ export default new Router({
       path:'/navlist0',
       component: Navlist0
     }
+    // {
+    //   //login页
+    //   path:'/me-login',
+    //   component:Me_login
+    // }
   ]
 })
